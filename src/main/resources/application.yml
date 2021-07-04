@@ -1,3 +1,17 @@
 micronaut:
   application:
-    name: carrosGrpc
+    name: carros-grpc
+datasources:
+  default:
+    url: jdbc:mysql://localhost/carroGrpc?createDatabaseIfNotExist = true
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    dialect: mysql
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        show_sql: true
